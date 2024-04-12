@@ -1,5 +1,4 @@
-import "./Components/categories.scss";
-import CategoryItem from "./Components/CategoryItem/CategoryItem";
+import CategoryList from "./Components/CategoryList/CategoryList";
 function App() {
   const categories = [
     {
@@ -29,27 +28,7 @@ function App() {
     },
   ];
 
-  return (
-    <div className="categories-container">
-      {categories.map((category) => {
-        // const { title, imageUrl, id } = categorie;
-
-        return (
-          // <div className="category" key={id}>
-          //   <div
-          //     className="background-image"
-          //     style={{ backgroundImage: `url(${imageUrl})` }}
-          //   />
-          //   <div className="category-body">
-          //     <h2>{title}</h2>
-          //     <p>Shop Now</p>
-          //   </div>
-          // </div>
-          <CategoryItem categoriesProps={category} key={category.id} />
-        );
-      })}
-    </div>
-  );
+  return <CategoryList categories={categories} />;
 }
 
 export default App;
