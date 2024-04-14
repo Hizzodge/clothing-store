@@ -1,0 +1,34 @@
+.navigation {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  .logo-link {
+    height: 100%;
+    width: 70px;
+    margin-left: 40px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+
+    .logo {
+      max-width: 50px;
+      max-height: 40px;
+    }
+  }
+
+  .navigation-links {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .nav-link {
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+  }
+}
