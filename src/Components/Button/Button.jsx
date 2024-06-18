@@ -6,7 +6,7 @@ const BUTTON_TYPE = {
   inverted: "inverted",
 };
 
-const Button = ({ label, buttonType, buttonProps }) => {
+const Button = ({ label, buttonType, ...buttonProps }) => {
   return (
     <button className={`button ${BUTTON_TYPE[buttonType]}`} {...buttonProps}>
       {label}

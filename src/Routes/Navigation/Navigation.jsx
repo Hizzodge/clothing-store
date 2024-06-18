@@ -1,7 +1,7 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { UserContext } from "../../Contexts/user.context";
-import { CartDropdownContext } from "../../Contexts/cartDropdown.context";
+import { CartContext } from "../../Contexts/cart.context";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 import BeeLogo from "./../../Assets/svg/bee-logo2.svg";
 import "./navigation.scss";
@@ -10,7 +10,7 @@ import CartDropdown from "../../Components/CartDropdown/CartDropdown";
 
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);
-  const { showDropdown } = useContext(CartDropdownContext);
+  const { isCartOpen } = useContext(CartContext);
 
   return (
     <>
@@ -33,7 +33,7 @@ const Navigation = () => {
           )}
           <CartIcon />
         </div>
-        {showDropdown && <CartDropdown />}
+        {isCartOpen && <CartDropdown />}
       </div>
       <Outlet />
     </>

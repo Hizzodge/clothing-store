@@ -20,7 +20,6 @@ export const UserProvider = ({ children }) => {
         createUsersDocumentForm(user);
       }
       setCurrentUser(user);
-      console.log(user);
     });
 
     return unsuscribe;
